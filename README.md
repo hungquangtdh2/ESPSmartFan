@@ -57,18 +57,36 @@ This project involves controlling a fan using an ESP8266 microcontroller. The fa
 1. Power on the ESP8266.
 2. Access the ESP8266 web interface to control the fan and view temperature information.
 3. Monitor MQTT topics for additional information.
-the topic of MQTT is 
-"/Fan/State" : return the On/off of fan
-"/Fan/Speed" : return Frequency value or PWM value 
-"/Fan/Gear"   : RElay state
-"/Fan/SetFrequency" : listen the frequency / pwm value
-"/Fan/SetBrightness" :listen the Tm1637
-"/Fan/SetGear" : set the gear on/off
-"/Fan/Temperature" : return temp 
-Pwm : 0-400 ( corresponding to 0-100%)
-Gear : ON,OFF
-frequency: 0-400 ( I am using Nidec M460 motor)
-bool isPWM = false; // change this if you want to use pwm 
+## MQTT Topics
+
+- **"/Fan/State"**: 
+  - *Description*: Returns the ON/OFF state of the fan.
+  - *Values*: "ON", "OFF"
+
+- **"/Fan/Speed"**: 
+  - *Description*: Returns the frequency value or PWM value of the fan.
+  - *Values*: 0-400 (corresponding to 0-100% for PWM or specific frequencies)
+
+- **"/Fan/Gear"**: 
+  - *Description*: Returns the relay state (gear) of the fan.
+  - *Values*: "ON", "OFF"
+
+- **"/Fan/SetFrequency"**: 
+  - *Description*: Listens for a new frequency value to set for the fan.
+  - *Payload*: 0-400 (corresponding to 0-100% for PWM or specific frequencies)
+
+- **"/Fan/SetBrightness"**: 
+  - *Description*: Listens for a new brightness value for the TM1637 display.
+  - *Payload*: TBD (define the range or specific values)
+
+- **"/Fan/SetGear"**: 
+  - *Description*: Sets the gear (relay) state of the fan.
+  - *Payload*: "ON", "OFF"
+
+- **"/Fan/Temperature"**: 
+  - *Description*: Returns the current temperature of the system.
+  - *Payload*: Temperature value
+
 ## License
 
 
