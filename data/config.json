@@ -1,0 +1,12 @@
+{
+    "wifiname": "No",
+    "password": "hunghung1",
+     "mqtt": {
+      "serverIP": "192.168.2.200",
+      "username": "quanghung",
+      "password": "analog",
+      "enabled": true
+    }
+    
+   
+  }
