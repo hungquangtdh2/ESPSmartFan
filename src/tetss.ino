@@ -96,7 +96,7 @@ void loop() {
     // Update frequency based on ADC
 
     // Map ADC value to frequency (0 to 400 Hz)
-    frequency = map(adcValue, 0, 1023, 0, 400);
+    frequency = map(adcValue, 0, 1023, MinFreequency, MaxFreequency);
     if (frequency <= 50) {
       analogWrite(PWM_PIN, 0); 
       frequency = 0;
@@ -762,14 +762,14 @@ void setFanFrequency(int newFrequency) {
     analogWrite(PWM_PIN, 128);  // 50% duty cycle
   }
    Serial.print("Frequency changed to: ");
-   display.showNumberDec(newFrequency);
+   display.showNumberDec(newFrequency*100/(MaxFreequency-MinFreequency));
    if( enableMQTT==1 ){
      publishFanSpeed(newFrequency);
   }
   }
   else{
     int pwmvalue ;
-    pwmvalue = newFrequency/4;  
+    pwmvalue = newFrequency*100/(MaxFreequency-MinFreequency);  
     analogWrite(PWM_PIN, pwmvalue);
     Serial.print("PWm changed to: ");
     display.showNumberDec(pwmvalue);
