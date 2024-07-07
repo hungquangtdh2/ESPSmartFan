@@ -762,7 +762,7 @@ void setFanFrequency(int newFrequency) {
     analogWrite(PWM_PIN, 128);  // 50% duty cycle
   }
    Serial.print("Frequency changed to: ");
-   display.showNumberDec(newFrequency*100/(MaxFreequency-MinFreequency));
+   display.showNumberDec(newFrequency*100/(MaxFreequency-MinFreequency)); // only show the percent
    if( enableMQTT==1 ){
      publishFanSpeed(newFrequency);
   }
