@@ -48,6 +48,7 @@ PubSubClient mqttClient(espClient);
 #define  sm_lamp_up 4216646235 
 #define  MaxFreequency 400
 #define MinFreequency 0
+#define pwmFre  18000
 // function same lamp1 
 // Declare global variables for
 // Global variable for frequency

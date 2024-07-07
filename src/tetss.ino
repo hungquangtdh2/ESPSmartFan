@@ -770,6 +770,7 @@ void setFanFrequency(int newFrequency) {
   else{
     int pwmvalue ;
     pwmvalue = newFrequency*100/(MaxFreequency-MinFreequency);  
+    analogWriteFreq(pwmFre);
     analogWrite(PWM_PIN, pwmvalue);
     Serial.print("PWm changed to: ");
     display.showNumberDec(pwmvalue);
