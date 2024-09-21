@@ -41,7 +41,7 @@ This project involves controlling a fan using an ESP8266 microcontroller. The fa
 - D5: TM1637 DIO
 - D6: Relay (ON / OFF)
 - D7: Switch Relay 
-- D8: Ds1820
+- D2: Ds1820
 - D5: VS1838 Data
 
 ## Getting Started
