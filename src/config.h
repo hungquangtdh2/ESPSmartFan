@@ -80,7 +80,7 @@ String mqttServerIP;
 String mqttUsername;
 String mqttPassword;
 bool enableMQTT;
-bool isPWM = false; // chuyen sang true neu nhu dung pwm/ false neu dung pwm
+bool isPWM = false; // chuyen sang true neu nhu dung pwm/ false neu dung CLK
 // NTP settings
 WiFiUDP ntpUDP;
 NTPClient timeClient(ntpUDP);
