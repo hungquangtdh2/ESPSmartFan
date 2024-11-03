@@ -5,7 +5,7 @@
 This project involves controlling a fan using an ESP8266 microcontroller. The fan speed can be adjusted, and the state of the fan (ON/OFF) is displayed. Additionally, the project integrates temperature sensing using a DS18B20 sensor, and the temperature is displayed on a TM1637 display.
 
 ## Features
-
+this brand is for PWM and using RF signal 
 - Fan speed control with a frequency slider.
 - Toggle the fan ON/OFF.
 - Display current fan frequency and relay state.
